@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asselin Tax Consulting | We Have You Covered</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a2860;
+      --maroon: #7a1515;
+      --cream: #faf8f3;
+      --gold: #c9a84c;
+      --dark: #111827;
+      --mid: #4b5563;
+      --light-rule: rgba(26,40,96,0.12);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 2px solid var(--light-rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .header-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .header-logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--maroon);
+      text-transform: uppercase;
+    }
+
+    nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      margin-left: 36px;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    nav a:hover { opacity: 1; color: var(--maroon); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 72px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 80px 64px 80px 80px;
+      position: relative;
+    }
+
+    .hero-left::after {
+      content: '';
+      position: absolute;
+      top: 15%; bottom: 15%; right: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--light-rule) 30%, var(--light-rule) 70%, transparent);
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--maroon);
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+    h1 em {
+      font-style: italic;
+      color: var(--maroon);
+    }
+
+    .hero-tagline {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--mid);
+      max-width: 440px;
+      margin-bottom: 48px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--cream);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border: 2px solid var(--navy);
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-primary:hover {
+      background: var(--maroon);
+      border-color: var(--maroon);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--navy);
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 36px;
+      border: 2px solid var(--navy);
+      transition: background 0.25s, color 0.25s;
+    }
+    .btn-secondary:hover {
+      background: var(--navy);
+      color: var(--cream);
+    }
+
+    /* hero right – logo display */
+    .hero-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 64px;
+      position: relative;
+    }
+
+    /* decorative large background letters */
+    .hero-bg-letter {
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28vw;
+      font-weight: 700;
+      color: rgba(26,40,96,0.04);
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+      right: -2vw;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .logo-lockup {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: fadeUp 1s ease both 0.3s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* SVG logo recreation */
+    .logo-svg-wrap {
+      width: 260px;
+      margin: 0 auto 28px;
+    }
+    .logo-svg-wrap img {
+      width: 100%;
+      height: auto;
+    }
+
+    .logo-company-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .logo-tagline-small {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      color: var(--dark);
+      text-transform: uppercase;
+      border-top: 1px solid var(--dark);
+      border-bottom: 1px solid var(--dark);
+      padding: 6px 0;
+    }
+
+    /* ── SERVICES ── */
+    .section {
+      padding: 100px 80px;
+    }
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 60px;
+      max-width: 500px;
+      line-height: 1.1;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      border: 2px solid var(--light-rule);
+    }
+
+    .service-card {
+      padding: 48px 40px;
+      border-right: 2px solid var(--light-rule);
+      position: relative;
+      transition: background 0.3s;
+    }
+    .service-card:last-child { border-right: none; }
+    .service-card:hover { background: white; }
+
+    .service-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: rgba(26,40,96,0.08);
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+    .service-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .service-desc {
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--mid);
+    }
+
+    /* ── ABOUT ── */
+    .about-section {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 100px 80px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-section .section-label { color: var(--gold); }
+    .about-section .section-title {
+      color: var(--cream);
+      margin-bottom: 28px;
+    }
+
+    .about-text {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .about-right {
+      border-left: 1px solid rgba(255,255,255,0.15);
+      padding-left: 80px;
+    }
+
+    .stat-row {
+      margin-bottom: 40px;
+    }
+    .stat-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.65;
+      margin-top: 6px;
+    }
+
+    /* ── CONTACT ── */
+    #contact.section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .contact-info-block {
+      margin-bottom: 36px;
+    }
+    .contact-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 8px;
+    }
+    .contact-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+      display: block;
+    }
+    .contact-value:hover { color: var(--maroon); }
+
+    .contact-right {
+      background: white;
+      border: 2px solid var(--light-rule);
+      padding: 48px;
+    }
+    .contact-right h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .contact-right p {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+
+    .portal-btn {
+      display: block;
+      background: var(--maroon);
+      color: white;
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      padding: 18px 32px;
+      transition: background 0.25s;
+      margin-bottom: 14px;
+    }
+    .portal-btn:hover { background: var(--navy); }
+
+    .portal-url {
+      font-size: 0.75rem;
+      color: var(--mid);
+      text-align: center;
+      letter-spacing: 0.06em;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      padding: 32px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+    footer span { color: rgba(255,255,255,0.25); }
+
+    /* ── RULE DECORATION ── */
+    .rule-ornament {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+    .rule-ornament::before,
+    .rule-ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--light-rule);
+    }
+    .rule-ornament-diamond {
+      width: 6px; height: 6px;
+      background: var(--maroon);
+      transform: rotate(45deg);
+    }
+
+    /* ── ANIMATIONS ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-left { padding: 60px 32px; }
+      .hero-right { display: none; }
+      .section { padding: 60px 32px; }
+      .services-grid { grid-template-columns: 1fr; }
+      .service-card { border-right: none; border-bottom: 2px solid var(--light-rule); }
+      .about-section { grid-template-columns: 1fr; padding: 60px 32px; }
+      .about-right { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 40px; }
+      #contact.section { grid-template-columns: 1fr; }
+      footer { flex-direction: column; gap: 12px; padding: 24px 32px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-brand">
+      <div class="header-logo-text">
+        Asselin Tax Consulting
+        <span>We have you covered</span>
+      </div>
+    </div>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="https://asselintaxes.sharefile.com" target="_blank">Client Portal</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Trusted Tax Professionals</div>
+      <h1>We Have<br><em>You</em><br>Covered.</h1>
+      <p class="hero-tagline">
+        Expert tax consulting for individuals and businesses in the greater Los Angeles area. Personalized service from a professional you can trust.
+      </p>
+      <div class="cta-group">
+        <a href="#contact" class="btn-primary">Get in Touch</a>
+        <a href="https://asselintaxes.sharefile.com" target="_blank" class="btn-secondary">Client Portal</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-bg-letter">T</div>
+      <div class="logo-lockup">
+        <div class="logo-svg-wrap">
+          <img src="ATC_Clean.jpg" alt="Asselin Tax Consulting Logo" />
+        </div>
+        <div class="logo-company-name">Asselin Tax Consulting</div>
+        <div class="logo-tagline-small">We have you covered</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="section-label">What We Do</div>
+    <div class="section-title">Comprehensive Tax Services</div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-num">01</div>
+        <div class="service-name">Individual Tax Preparation</div>
+        <p class="service-desc">Accurate, thorough preparation of personal tax returns. We find every deduction you're entitled to and ensure full compliance.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-num">02</div>
+        <div class="service-name">Business Tax Services</div>
+        <p class="service-desc">From sole proprietorships to corporations, we handle the full range of business tax filings and strategic planning.</p>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-num">03</div>
+        <div class="service-name">Tax Planning & Consulting</div>
+        <p class="service-desc">Proactive strategies to minimize your tax liability year-round, not just at filing time. Stay ahead with expert guidance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-left">
+      <div class="section-label">About Us</div>
+      <div class="section-title">Personal Service You Can Rely On</div>
+      <p class="about-text">
+        Greg Asselin founded Asselin Tax Consulting with one principle in mind: every client deserves attentive, expert, personalized tax service. Based in the Los Angeles area, we work with individuals and businesses to navigate the complexities of the tax code with confidence.
+      </p>
+      <p class="about-text">
+        When you work with us, you work directly with Greg — not a rotating cast of preparers. We take the time to understand your unique situation and deliver results.
+      </p>
+    </div>
+    <div class="about-right">
+      <div class="stat-row">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Dedicated to your financial wellbeing</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-number">1:1</div>
+        <div class="stat-label">Direct service from Greg Asselin</div>
+      </div>
+      <div class="stat-row">
+        <div class="stat-number">LA</div>
+        <div class="stat-label">Proudly serving the greater Los Angeles area</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="contact-left">
+      <div class="section-label">Get In Touch</div>
+      <div class="section-title">Let's Start a Conversation</div>
+
+      <div class="contact-info-block">
+        <div class="contact-label">Your Consultant</div>
+        <div class="contact-value" style="cursor:default">Greg Asselin</div>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-label">Email</div>
+        <a href="mailto:info@asselintaxes.com" class="contact-value">info@asselintaxes.com</a>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-label">Phone</div>
+        <a href="tel:6263324870" class="contact-value">(626) 332-4870</a>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-label">Website</div>
+        <a href="https://asselintaxes.com" class="contact-value">asselintaxes.com</a>
+      </div>
+    </div>
+    <div class="contact-right fade-in">
+      <h3>Existing Clients</h3>
+      <p>Access your documents, upload files, and collaborate with Greg securely through our client portal.</p>
+      <a href="https://asselintaxes.sharefile.com" target="_blank" class="portal-btn">Access Client Portal &rarr;</a>
+      <div class="portal-url">asselintaxes.sharefile.com</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>&copy; 2025 Asselin Tax Consulting &mdash; All rights reserved.</div>
+    <div>
+      <a href="tel:6263324870" style="color:rgba(255,255,255,0.45); text-decoration:none;">(626) 332-4870</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:info@asselintaxes.com" style="color:rgba(255,255,255,0.45); text-decoration:none;">info@asselintaxes.com</a>
+    </div>
+  </footer>
+
+  <script>
+    // Intersection observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 120);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
