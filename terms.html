@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms &amp; Conditions | Asselin Tax Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a2860;
+      --maroon: #7a1515;
+      --cream: #faf8f3;
+      --gold: #c9a84c;
+      --dark: #111827;
+      --mid: #4b5563;
+      --light-rule: rgba(26,40,96,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 2px solid var(--light-rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+    }
+    .header-brand { display: flex; align-items: center; gap: 16px; }
+    .header-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .header-logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--maroon);
+      text-transform: uppercase;
+    }
+    nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      margin-left: 36px;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    nav a:hover { opacity: 1; color: var(--maroon); }
+
+    .page-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 120px 48px 100px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--maroon);
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .last-updated {
+      font-size: 0.78rem;
+      color: var(--mid);
+      letter-spacing: 0.06em;
+      margin-bottom: 48px;
+    }
+
+    .rule-ornament {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .rule-ornament::before, .rule-ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--light-rule);
+    }
+    .rule-ornament-diamond {
+      width: 6px; height: 6px;
+      background: var(--maroon);
+      transform: rotate(45deg);
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin: 0 0 20px 24px;
+    }
+    ul li {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      border-left: 3px solid var(--maroon);
+      padding: 20px 24px;
+      margin: 32px 0;
+      background: rgba(26,40,96,0.03);
+    }
+    .highlight-box p { margin-bottom: 0; }
+
+    a { color: var(--navy); }
+    a:hover { color: var(--maroon); }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      padding: 32px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+      .page-content { padding: 100px 28px 80px; }
+      footer { flex-direction: column; gap: 12px; padding: 24px 32px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-brand">
+      <a href="/" class="header-logo-text">
+        Asselin Tax Consulting
+        <span>We have you covered</span>
+      </a>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://asselintaxes.sharefile.com" target="_blank">Client Portal</a>
+    </nav>
+  </header>
+
+  <div class="page-content">
+    <div class="eyebrow">Legal</div>
+    <h1>Terms &amp; Conditions</h1>
+    <div class="last-updated">Effective Date: May 12, 2025</div>
+
+    <div class="rule-ornament"><div class="rule-ornament-diamond"></div></div>
+
+    <p>These Terms and Conditions govern your use of services provided by Asselin Tax Consulting ("we," "us," or "our"), including our website at asselintaxes.com and any communications sent on our behalf. By engaging our services, you agree to these terms.</p>
+
+    <h2>SMS Messaging Program</h2>
+    <p>Asselin Tax Consulting operates an SMS messaging program to communicate with clients and staff regarding tax services and business operations.</p>
+
+    <div class="highlight-box">
+      <p><strong>Program Name:</strong> Asselin Tax Consulting Client &amp; Staff Notifications<br>
+      <strong>Message Types:</strong> Appointment reminders, document availability alerts, voicemail notifications, responses to client inquiries, and operational staff alerts<br>
+      <strong>Message Frequency:</strong> Low volume; varies based on your activity and appointment schedule<br>
+      <strong>Support:</strong> Reply HELP or call (626) 332-4870<br>
+      <strong>Opt-Out:</strong> Reply <strong>STOP</strong> at any time to unsubscribe<br>
+      <strong>Rates:</strong> Message and data rates may apply</p>
+    </div>
+
+    <h2>Consent to Receive Messages</h2>
+    <p>By providing your mobile phone number and engaging our services, you consent to receive text messages from Asselin Tax Consulting for service-related purposes. Consent is not a condition of purchasing any service. You may withdraw consent at any time by replying STOP.</p>
+
+    <h2>Services</h2>
+    <p>Asselin Tax Consulting provides tax preparation, tax planning, and consulting services. All services are performed by or under the supervision of Greg Asselin. We reserve the right to decline to perform services at our discretion.</p>
+
+    <h2>Client Responsibilities</h2>
+    <p>Clients are responsible for providing accurate, complete, and timely information necessary for the preparation of tax returns and other filings. Asselin Tax Consulting is not liable for errors resulting from incomplete or inaccurate information provided by the client.</p>
+
+    <h2>Confidentiality</h2>
+    <p>All client information is treated as strictly confidential in accordance with applicable professional standards and our Privacy Policy. We do not share client information with third parties except as described in our Privacy Policy or as required by law.</p>
+
+    <h2>Limitation of Liability</h2>
+    <p>Our liability is limited to the fees paid for the specific services rendered. We are not liable for any penalties, interest, or other amounts assessed by tax authorities resulting from information provided by the client.</p>
+
+    <h2>Governing Law</h2>
+    <p>These terms are governed by the laws of the State of California. Any disputes shall be resolved in Los Angeles County, California.</p>
+
+    <h2>Changes to These Terms</h2>
+    <p>We may update these Terms and Conditions from time to time. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+
+    <h2>Contact Us</h2>
+    <p>Questions about these Terms and Conditions:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@asselintaxes.com">info@asselintaxes.com</a></li>
+      <li>Phone: <a href="tel:6263324870">(626) 332-4870</a></li>
+      <li>Website: <a href="https://asselintaxes.com">asselintaxes.com</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div>&copy; 2025 Asselin Tax Consulting &mdash; All rights reserved.</div>
+    <div>
+      <a href="tel:6263324870" style="color:rgba(255,255,255,0.45); text-decoration:none;">(626) 332-4870</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:info@asselintaxes.com" style="color:rgba(255,255,255,0.45); text-decoration:none;">info@asselintaxes.com</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/privacy-policy" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/terms" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms &amp; Conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>

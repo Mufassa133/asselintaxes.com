@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Asselin Tax Consulting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #1a2860;
+      --maroon: #7a1515;
+      --cream: #faf8f3;
+      --gold: #c9a84c;
+      --dark: #111827;
+      --mid: #4b5563;
+      --light-rule: rgba(26,40,96,0.12);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Libre Baskerville', Georgia, serif;
+      background: var(--cream);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 2px solid var(--light-rule);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      height: 72px;
+    }
+    .header-brand { display: flex; align-items: center; gap: 16px; }
+    .header-logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--navy);
+      line-height: 1.2;
+      text-decoration: none;
+    }
+    .header-logo-text span {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      color: var(--maroon);
+      text-transform: uppercase;
+    }
+    nav a {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--navy);
+      text-decoration: none;
+      margin-left: 36px;
+      opacity: 0.75;
+      transition: opacity 0.2s;
+    }
+    nav a:hover { opacity: 1; color: var(--maroon); }
+
+    .page-content {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 120px 48px 100px;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--maroon);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: var(--maroon);
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+
+    .last-updated {
+      font-size: 0.78rem;
+      color: var(--mid);
+      letter-spacing: 0.06em;
+      margin-bottom: 48px;
+    }
+
+    .rule-ornament {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .rule-ornament::before, .rule-ornament::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--light-rule);
+    }
+    .rule-ornament-diamond {
+      width: 6px; height: 6px;
+      background: var(--maroon);
+      transform: rotate(45deg);
+    }
+
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      margin: 0 0 20px 24px;
+    }
+    ul li {
+      font-size: 0.95rem;
+      line-height: 1.9;
+      color: var(--mid);
+      margin-bottom: 8px;
+    }
+
+    a { color: var(--navy); }
+    a:hover { color: var(--maroon); }
+
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      padding: 32px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+    }
+    footer span { color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 900px) {
+      header { padding: 0 24px; }
+      nav { display: none; }
+      .page-content { padding: 100px 28px 80px; }
+      footer { flex-direction: column; gap: 12px; padding: 24px 32px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-brand">
+      <a href="/" class="header-logo-text">
+        Asselin Tax Consulting
+        <span>We have you covered</span>
+      </a>
+    </div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/#services">Services</a>
+      <a href="/#about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="https://asselintaxes.sharefile.com" target="_blank">Client Portal</a>
+    </nav>
+  </header>
+
+  <div class="page-content">
+    <div class="eyebrow">Legal</div>
+    <h1>Privacy Policy</h1>
+    <div class="last-updated">Effective Date: May 12, 2025</div>
+
+    <div class="rule-ornament"><div class="rule-ornament-diamond"></div></div>
+
+    <p>Asselin Tax Consulting ("we," "us," or "our") is committed to protecting your personal information. This Privacy Policy describes how we collect, use, and safeguard information in connection with our tax consulting services and communications.</p>
+
+    <h2>Information We Collect</h2>
+    <p>We may collect the following types of information:</p>
+    <ul>
+      <li>Name, address, phone number, and email address</li>
+      <li>Tax identification numbers and financial information necessary for tax preparation</li>
+      <li>Communication records including appointment confirmations and document exchanges</li>
+      <li>Inbound call information including caller ID and voicemail recordings for operational purposes</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>Information collected is used solely for the following purposes:</p>
+    <ul>
+      <li>Preparing and filing your tax returns and related documents</li>
+      <li>Scheduling and confirming appointments</li>
+      <li>Sending operational notifications such as appointment reminders, document availability alerts, and responses to your inquiries</li>
+      <li>Managing our client relationship and communications</li>
+    </ul>
+
+    <h2>SMS and Text Messaging</h2>
+    <p>With your consent, we may send text messages to your mobile phone number for appointment reminders, document notifications, and other service-related communications. Message and data rates may apply. You may opt out at any time by replying STOP to any message. Reply HELP for assistance or contact us at (626) 332-4870.</p>
+
+    <h2>Information Sharing</h2>
+    <p>We do not sell, rent, or share your personal information with third parties for marketing purposes. Information may be shared only as required by law, with tax authorities as part of your filing, or with service providers directly involved in delivering our services (such as secure document delivery platforms), under strict confidentiality obligations.</p>
+
+    <h2>Data Security</h2>
+    <p>We take reasonable measures to protect your personal and financial information, including the use of encrypted document portals and secure communications. However, no method of transmission over the internet is completely secure.</p>
+
+    <h2>Retention</h2>
+    <p>We retain client records in accordance with IRS and applicable state requirements, typically a minimum of seven years.</p>
+
+    <h2>Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal information by contacting us directly. Requests to delete information may be limited by our legal and regulatory retention obligations.</p>
+
+    <h2>Contact Us</h2>
+    <p>If you have questions about this Privacy Policy, please contact us:</p>
+    <ul>
+      <li>Email: <a href="mailto:info@asselintaxes.com">info@asselintaxes.com</a></li>
+      <li>Phone: <a href="tel:6263324870">(626) 332-4870</a></li>
+      <li>Website: <a href="https://asselintaxes.com">asselintaxes.com</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <div>&copy; 2025 Asselin Tax Consulting &mdash; All rights reserved.</div>
+    <div>
+      <a href="tel:6263324870" style="color:rgba(255,255,255,0.45); text-decoration:none;">(626) 332-4870</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:info@asselintaxes.com" style="color:rgba(255,255,255,0.45); text-decoration:none;">info@asselintaxes.com</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/privacy-policy" style="color:rgba(255,255,255,0.45); text-decoration:none;">Privacy Policy</a>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="/terms" style="color:rgba(255,255,255,0.45); text-decoration:none;">Terms &amp; Conditions</a>
+    </div>
+  </footer>
+
+</body>
+</html>
